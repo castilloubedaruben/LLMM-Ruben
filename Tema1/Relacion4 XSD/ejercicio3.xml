@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calendario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio3.xsd">
+        <evento id="1">
+                <titulo>Conferencia</titulo>
+                <fecha>2025-10-02</fecha>
+                <hora>08:00:00</hora>
+                <ubicacion>Clase 1 DAW</ubicacion>
+                <codigoPostal>18953</codigoPostal>
+        </evento>
+        <evento id="2">
+                <titulo>Concierto</titulo>
+                <fecha>2025-10-02</fecha>
+                <hora>20:30:00</hora>
+                <ubicacion>Estadio la Cartuja</ubicacion>
+                <codigoPostal>20563</codigoPostal>
+        </evento>
+        <evento id="3">
+                <titulo>Reunion de trabajo</titulo>
+                <fecha>2025-10-03</fecha>
+                <hora>10:30:00</hora>
+                <ubicacion>Sala de conferencias</ubicacion>
+                <codigoPostal>21598</codigoPostal>
+        </evento>
+</calendario>
+
+<!-- Ejercicio 3 – Calendario de Eventos
+Se te proporciona un XSD. Debes crear un XML válido con al menos 3 eventos.
+
+👉 Tu tarea:
+
+Crea un XML con tres eventos: una conferencia, un concierto y una reunión de trabajo.
+Asegúrate de que cada evento incluya un codigoPostal válido de 5 dígitos (regex). -->

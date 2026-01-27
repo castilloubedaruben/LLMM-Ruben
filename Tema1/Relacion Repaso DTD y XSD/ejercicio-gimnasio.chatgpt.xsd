@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="gimnasio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="socio" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[A-Z][a-zA-Z ]*"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="edad">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:positiveInteger"/>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="telefono">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d{3}-\d{3}-\d{3}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="membresia">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="mensual"/>
+                                        <xs:enumeration value="trimestral"/>
+                                        <xs:enumeration value="anual"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+
+
+
+
+
+<!-- 📄 Enunciado + XML
+
+El sistema gestiona un gimnasio con sus socios.
+
+Características:
+El documento raíz es gimnasio.
+Contiene varios socio.
+Cada socio tiene:
+nombre (cadena normal).
+edad (número entero).
+telefono (formato NNN-NNN-NNN).
+membresia con los valores posibles: "Mensual", "Trimestral", "Anual".
+Cada socio tiene un atributo id que es un número positivo y obligatorio. -->

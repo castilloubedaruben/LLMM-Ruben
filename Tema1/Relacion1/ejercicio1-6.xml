@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ## Ejercicio 6: Crear un XML de un instituto
+Crea un XML que represente un **instituto**.  
+Debe tener varias `clases`, y cada clase varios `alumnos`.  
+Los alumnos deben tener al menos: `nombre`, `edad` y `notaMedia`. -->
+
+<instituto>
+    <clase>
+        <!-- COMENTARIO: Se podria quitar la etiqueta alumnos porque dentro de clase no hay mas etiquetas, solamente alumnos, si exitiera la etiqueta profesores, no se podria quitar -->
+        <alumnos> 
+            <alumno>
+            <nombre>Ruben</nombre>
+            <edad>30</edad>
+            <notaMedia>9</notaMedia>
+            </alumno>
+            <alumno>
+            <nombre>Juanjo</nombre>
+            <edad>31</edad>
+            <notaMedia>8</notaMedia>
+            </alumno>
+        </alumnos>
+    </clase>
+    <clase>
+        <alumnos>
+            <alumno>
+            <nombre>Guillermo</nombre>
+            <edad>28</edad>
+            <notaMedia>6</notaMedia>
+            </alumno>
+            <alumno>
+            <nombre>Juan</nombre>
+            <edad>25</edad>
+            <notaMedia>7</notaMedia>
+            </alumno>
+        </alumnos>
+    </clase>
+</instituto>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ejercicio-biblioteca.chatgpt.xsd">
+
+    <libro>
+        <titulo>libro</titulo>
+        <autor>ruben</autor>
+        <anioPublicacion>1500</anioPublicacion>
+        <genero>novela</genero>
+    </libro>
+    <libro>
+        <titulo>libro</titulo>
+        <autor>reda</autor>
+        <anioPublicacion>1600</anioPublicacion>
+        <genero>historia</genero>
+    </libro>
+</biblioteca>
+
+<!-- Ejercicio: Biblioteca 📚
+Crea un esquema (XSD) que defina la estructura de un documento XML que represente una biblioteca con varios libros.
+Cada libro debe tener:
+Título (string, máximo 100 caracteres)
+Autor (string, máximo 50 caracteres)
+Año de publicación (entero, entre 1500 y 2025)
+Género (uno de los siguientes valores: Novela, Poesía, Ciencia, Historia)
+La biblioteca puede contener uno o más libros. -->

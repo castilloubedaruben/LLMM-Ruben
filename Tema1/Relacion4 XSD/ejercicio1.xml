@@ -1,0 +1,34 @@
+<!-- ## **Ejercicio 1 – Biblioteca de Libros**
+Crea un **XSD** que defina la estructura de una biblioteca.  
+El XML correspondiente debe cumplir las siguientes condiciones:
+
+- La biblioteca contiene varios **libros**.
+- Cada libro tiene:
+- Un `titulo` (cadena obligatoria, máximo 100 caracteres).
+- Un `autor` (cadena obligatoria que debe empezar por mayúscula, usando regex).
+- Un `anioPublicacion` (número entero entre 1900 y 2025).
+- Un `genero` (valor restringido a: *Novela, Poesía, Ensayo, Teatro*).
+- Un `isbn` que siga el patrón `XXX-XX-XXXX-XXX-X` (regex para ISBN-13 simplificado).
+- Cada libro debe tener un atributo `id` único de tipo entero positivo.
+
+👉 Tu tarea:  
+1. Crea el **XSD** con estas reglas.  
+2. Escribe un XML de ejemplo con al menos 3 libros.- -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio1.xsd">
+    <libro id="1">
+        <titulo>Cien Años de Soledad</titulo>
+        <autor>Gabriel Garcia Marquez</autor>
+        <anioPublicacion>1967</anioPublicacion>
+        <genero>Novela</genero>
+        <isbn>978-84-3764-049-7</isbn>
+    </libro>
+    <libro id="2">
+        <titulo>La Odisea</titulo>
+        <autor>Homero</autor>
+        <anioPublicacion>1995</anioPublicacion>
+        <genero>Poesía</genero>
+        <isbn>978-84-2494-049-2</isbn>
+    </libro>
+</biblioteca>

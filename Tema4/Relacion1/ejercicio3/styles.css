@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+div>ol>li {
+    color: green;
+}
+
+li + p {
+    color: white;
+    background-color: black;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="ejercicio-tienda-tecnologica.xsd">
+    <producto id="1">
+        <nombre>raton</nombre>
+        <categoria>perifericos</categoria>
+        <precio>15.50</precio>
+        <stock>750</stock>
+        <proveedor>
+            <nombre>pccomponente</nombre> 
+            <telefono>600-366-369</telefono>
+            <pais>españa</pais>
+        </proveedor>
+    </producto>
+    <producto id="2">
+        <nombre>pantalla</nombre>
+        <categoria>ordenador</categoria>
+        <precio>1500.99</precio>
+        <stock>850</stock>
+        <proveedor>
+            <nombre>pccomponente</nombre>
+            <telefono>500-265-364</telefono>
+            <pais>españa</pais>
+        </proveedor>
+    </producto>
+</inventario>
+
+<!-- Ejercicio 6 – Inventario de Tienda Tecnológica
+Crea un XSD que defina la estructura de un inventario y un XML de prueba.
+
+Requisitos:
+Raíz <inventario>.
+Contiene varios producto, con:
+id (atributo obligatorio, tipo entero positivo).
+nombre (string obligatorio).
+categoria (enumeración: Periférico, Ordenador, Móvil, Accesorio).
+precio (decimal, con 2 decimales exactos → regex \d+\.\d{2}).
+stock (entero entre 0 y 1000).
+Cada producto puede tener 0 o más proveedor:
+nombre, telefono (XXX-XXX-XXX), pais.
+👉 Añade también un tipo derivado por restricción para precio con rango entre 0.01 y 9999.99. -->

@@ -1,0 +1,14 @@
+h2 {
+    color: aqua;
+}
+
+section {
+    background-image: url(images.jpeg);
+    background-size: cover ;
+    
+}
+
+p:hover {
+    background-color: white;
+
+}

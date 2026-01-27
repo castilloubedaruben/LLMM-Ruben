@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ## Ejercicio 2: DTD externa (crear el DTD)
+A continuación se proporciona un **XML con referencia a una DTD externa** sobre un curso de una **academia**.  
+Tu tarea es escribir el archivo `curso.dtd` que defina las reglas para que el XML sea válido. -->
+
+<!DOCTYPE curso SYSTEM "curso.dtd">
+<curso>
+  <nombre>Desarrollo Web</nombre>
+  <profesor>María López</profesor>
+  <horas>120</horas>
+</curso>

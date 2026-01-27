@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tienda SYSTEM "tienda.dtd">
+<tienda>
+    <nombre>tiendecita azulea</nombre>
+    <pokemon>
+        <nombre>pikachu</nombre>
+        <tipo>electrico</tipo>
+        <precio>1500</precio>
+    </pokemon>
+    <pokemon>
+        <nombre>pikachu</nombre>
+        <tipo>electrico</tipo>
+        <precio>1500</precio>
+    </pokemon>
+</tienda>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 🔴 Ejercicio 5 — Tienda Pokémon (DTD externa)
+Crea un XML con DTD externa llamada tienda.dtd para representar una tienda Pokémon.
+Reglas:
+
+El elemento raíz es <tienda>.
+tienda contiene: nombre, pokemon+.
+pokemon contiene: nombre, tipo+, precio.
+tipo puede repetirse una o más veces.
+precio y nombre son texto.
+📌 Crea ambos archivos:
+
+tienda.xml
+tienda.dtd
+💡 Este ejercicio combina jerarquías, repeticiones y DTD externa. -->

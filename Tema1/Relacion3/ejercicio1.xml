@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 📌 Instrucciones:  
+1. Crea un XML con DTD interna que represente un **Pokémon**.  
+2. El elemento raíz será `<pokemon>`.  
+3. Reglas de DTD:  
+   - `pokemon` contiene: `nombre`, `tipo`, `nivel?`  
+   - `nivel` es opcional.  
+   - Todos los demás elementos son de texto (`#PCDATA`).  -->
+
+<!DOCTYPE pokemon [
+    <!ELEMENT pokemon (nombre, tipo, nivel?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT nivel (#PCDATA)>
+]>
+
+<pokemon>
+    <nombre>Charmander</nombre>
+    <tipo>Fuego</tipo>
+    <nivel>12</nivel>
+</pokemon>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+    <alumno>
+        <nombre>Ruben</nombre>
+        <apellido>Castillo</apellido>
+        <edad>30</edad>
+        <email>ruben@gmail.com</email>
+    </alumno>
+    <alumno>
+        <nombre>Ruben</nombre>
+        <apellido>Castillo</apellido>
+        <edad>30</edad>
+        <email>ruben@gmail.com</email>
+    </alumno>
+</alumnos>

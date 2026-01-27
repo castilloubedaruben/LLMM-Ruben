@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ## Ejercicio 3 — Liga Pokémon con DTD externa
+**Objetivo:** Separar en archivo externo y practicar estructuras más grandes.  
+
+📌 Instrucciones:  
+1. Crea un archivo `liga.xml` que represente una **Liga Pokémon**.  
+2. El XML debe usar una DTD externa llamada `liga.dtd`.  
+3. Reglas de DTD:  
+- El elemento raíz es `liga`.  
+- `liga` contiene: `entrenador+`.  
+- `entrenador` contiene: `nombre`, `pokemon*`.  
+- `pokemon` contiene: `nombre`, `tipo+`, `nivel?`.  
+
+📌 Tarea:  
+- Escribe `liga.xml` con al menos 2 entrenadores.  
+- Cada entrenador debe tener mínimo 2 Pokémon.  
+- Escribe también `liga.dtd` con las reglas.   -->
+
+<!DOCTYPE liga SYSTEM "liga.dtd">
+
+<liga>
+    <entrenador>
+        <nombre>Rojo</nombre>
+        <pokemon>
+            <nombre>Venausaur</nombre>
+            <tipo>Planta</tipo>
+            <tipo>Veneno</tipo>
+            <nivel>50</nivel>
+        </pokemon>
+        <pokemon>
+            <nombre>Blasoise</nombre>
+            <tipo>Agua</tipo>
+            <nivel>50</nivel>
+        </pokemon>
+    </entrenador>
+        <entrenador>
+        <nombre>Brock</nombre>
+        <pokemon>
+            <nombre>Onix</nombre>
+            <tipo>Tierra</tipo>
+            <nivel>50</nivel>
+        </pokemon>
+        <pokemon>
+            <nombre>Geodude</nombre>
+            <tipo>Tierra</tipo>
+            <tipo>Roca</tipo>
+            <nivel>25</nivel>
+        </pokemon>
+    </entrenador>
+</liga>

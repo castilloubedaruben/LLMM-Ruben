@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #defbff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.encabezado {
+    display: flex;
+}
+
+.menunavegacion {
+    display: flex;
+    list-style-type: none;
+    gap: 15px;
+}
+
+li>a:hover {
+    background-color: #0f197d;
+    color: white;
+}
+
+li>a:active {
+    color: #7d0f58;
+}
+
+.hero{
+    background-image: ;
+    background-size: cover;
+    background-position: center;
+}
+
+

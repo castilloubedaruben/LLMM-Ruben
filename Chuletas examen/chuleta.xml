@@ -1,0 +1,27 @@
+
+<!-- 1-Siempre se empiezan los xml copiando esto: -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<la_raiz xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="el nombre del archivo.xsd">
+    <elemento atributo="lo que sea el atributo">
+        <elemento1>  </elemento1>
+        <elemento2>  </elemento2>
+        <elemento3>  </elemento3>
+        <elemento4(ejemplo:notas)>
+            <elemento4.1(ejemplo:nota)>  </elemento4.1(ejemplo:nota)>
+            <elemento4.1(ejemplo:nota)>  </elemento4.1(ejemplo:nota)>
+            <elemento4.1(ejemplo:nota)>  </elemento4.1(ejemplo:nota)>
+        </elemento4>
+    </elemento>
+    <elemento atributo="lo que sea el atributo">
+        <elemento1>  </elemento1>
+        <elemento2>  </elemento2>
+        <elemento3>  </elemento3>
+        <elemento4(ejemplo:notas)>
+            <elemento4.1(ejemplo:nota)>  </elemento4.1(ejemplo:nota)>
+            <elemento4.1(ejemplo:nota)>  </elemento4.1(ejemplo:nota)>
+            <elemento4.1(ejemplo:nota)>  </elemento4.1(ejemplo:nota)>
+        </elemento4>
+    </elemento>
+<"/poner aqui la raiz">

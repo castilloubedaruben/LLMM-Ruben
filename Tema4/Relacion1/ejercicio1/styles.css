@@ -1,0 +1,10 @@
+* {
+    color: black;
+    margin: 25px;
+    padding: 25px;
+}
+
+body {
+    background: linear-gradient(#57C785, #EDDD53); 
+    background-repeat: no-repeat;
+}

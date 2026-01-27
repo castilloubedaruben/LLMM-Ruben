@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="clase">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="alumno" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[A-Z][a-zA-Z ]*" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="edad">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="6" />
+                                        <xs:maxInclusive value="18" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="dni">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="(\d{8}[A-Z])"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="notas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nota" minOccurs="1" maxOccurs="5">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:decimal">
+                                                    <xs:minInclusive value="0" />
+                                                    <xs:maxInclusive value="10" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+<!-- Ejercicio 4 – Alumnos y Notas
+Diseña desde cero un XML y su XSD para un sistema escolar con estas características:
+
+El documento tiene un elemento raíz clase.
+La clase contiene varios alumno.
+Cada alumno tiene:
+nombre (cadena que debe empezar con mayúscula, regex).
+edad (entero entre 6 y 18).
+Una lista de nota (decimal entre 0 y 10, puede haber entre 1 y 5 notas).
+Un dni que siga el formato 8 dígitos + 1 letra (regex).
+El alumno debe tener un atributo id único (entero positivo).
+👉 Tu tarea:
+
+Define el XSD.
+Escribe un XML con al menos 2 alumnos y sus notas. -->

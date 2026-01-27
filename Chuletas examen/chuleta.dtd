@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+el archivo xml hecho con dtd se empieza con esto
+
+
+Ejemplo de DTD Interna:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+<!ELEMENT biblioteca (seccion+)>
+<!ELEMENT seccion (nombre,libro+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT libro (titulo,autor,anio?)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
+]>
+<biblioteca>
+    <seccion>
+        <nombre>literatura</nombre>
+        <libro>
+            <titulo>el arte de volar</titulo>
+            <autor>franz wager</autor>
+            <anio>1975</anio>
+        </libro>
+    </seccion>
+    <seccion>
+        <nombre>historia</nombre>
+        <libro>
+            <titulo>el muro de berlin</titulo>
+            <autor>walter</autor>
+            <anio>1990</anio>
+        </libro>
+    </seccion>
+</biblioteca>
+
+
+
+Ejemplo de DTD Externa:
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tienda SYSTEM "tienda.dtd">
+<tienda>
+    <nombre>tiendecita azulea</nombre>
+    <pokemon>
+        <nombre>pikachu</nombre>
+        <tipo>electrico</tipo>
+        <precio>1500</precio>
+    </pokemon>
+    <pokemon>
+        <nombre>pikachu</nombre>
+        <tipo>electrico</tipo>
+        <precio>1500</precio>
+    </pokemon>
+</tienda>
+
+
+El archivo tienda.dtd contendría las definiciones:
+
+<!ELEMENT tienda (nombre, pokemon+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT pokemon (nombre, tipo+, precio)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+
+Cantidad de ocurrencias: 
+El número de veces que un elemento puede aparecer se define mediante los operadores +, *, ?:
+
++ indica que el elemento debe aparecer al menos una vez.
+* indica que el elemento puede aparecer cero o más veces.
+? indica que el elemento es opcional y puede aparecer una o ninguna vez

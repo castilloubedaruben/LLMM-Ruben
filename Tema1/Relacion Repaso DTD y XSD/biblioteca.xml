@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (seccion+)>
+    <!ELEMENT seccion (nombre,libro+)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT libro (titulo,autor,anio?)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+]>
+<biblioteca>
+    <seccion>
+        <nombre>literatura</nombre>
+        <libro>
+            <titulo>el arte de volar</titulo>
+            <autor>franz wager</autor>
+            <anio>1975</anio>
+        </libro>
+        <libro>
+            <titulo>shshgh</titulo>
+            <autor>franz wager</autor>
+            <anio>1972</anio>
+        </libro>
+    </seccion>
+    <seccion>
+        <nombre>historia</nombre>
+        <libro>
+            <titulo>el muro de berlin</titulo>
+            <autor>walter</autor>
+            <anio>1990</anio>
+        </libro>
+        <libro>
+            <titulo>el nazismo</titulo>
+            <autor>franz wager</autor>
+            <anio>1968</anio>
+        </libro>
+    </seccion>
+</biblioteca>
+
+
+<!-- 🟠 Ejercicio 4 — Biblioteca (estructuras anidadas)
+Crea un XML con DTD interna para representar una biblioteca con varias secciones.
+Reglas:
+
+El elemento raíz es <biblioteca>.
+biblioteca contiene: seccion+.
+seccion contiene: nombre, libro+.
+libro contiene: titulo, autor, anio?.
+📌 Incluye al menos dos secciones y varios libros por cada una. -->

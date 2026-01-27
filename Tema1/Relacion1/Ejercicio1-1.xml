@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Biblioteca>
+    <libro>
+        <titulo>La vuelta al mundo</titulo>
+        <autor>Ruben</autor>
+        <anio>1995</anio>
+        <editorial>Planeta</editorial>
+    </libro>
+    <libro>
+        <titulo>La vuelta al sol</titulo>
+        <autor>Dario</autor>
+        <anio>2000</anio>
+        <editorial>Random</editorial>
+    </libro>
+    <libro>
+        <titulo>La vuelta a la luna</titulo>
+        <autor>Juan</autor>
+        <anio>2010</anio>
+        <editorial>Editor</editorial>
+    </libro>
+</Biblioteca>

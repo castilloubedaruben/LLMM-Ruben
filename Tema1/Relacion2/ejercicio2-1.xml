@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ## Ejercicio 1: DTD interna (crear el XML)
+A continuación se proporciona una **DTD interna** sobre un alumno de una **academia**.  
+Debes crear un documento XML válido que siga estas reglas.
+
+```xml
+<!DOCTYPE alumno [
+<!ELEMENT alumno (nombre, apellido, curso)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT curso (#PCDATA)>
+]>
+```
+
+📌 **Tarea:** Crea un XML con un alumno ficticio que respete la DTD. -->
+
+<!DOCTYPE alumno [
+<!ELEMENT alumno (nombre, apellido, curso)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT curso (#PCDATA)>
+]>
+
+<alumno>
+    <nombre>Ruben</nombre>
+    <apellido>Castillo</apellido>
+    <curso>DAW</curso>
+</alumno>

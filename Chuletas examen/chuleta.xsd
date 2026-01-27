@@ -1,0 +1,151 @@
+<!-- 1-Poner esto siempre al empezar el xsd -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+</xs:schema>
+
+
+<!-- 2-Etiqueta para los elementos -->
+<xs:element name="poner aqui la raiz. ejemplo: clase">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="elementos que forman la raiz. ejemplo: alumno" maxOccurs="unbounded" cuando es indefinido>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element
+                            name="elementos que lo conforman. ejemplo: de alumno, nombre, edad, dani, notas">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:se pone si es string,integer,decimal">
+                                    <xs:pattern value="suele ser un regex" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:sequence>
+                    <!-- Aqui iria el atributo si el elemento alumno tuviera -->
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <!-- Aqui iria el atributo si clase tuviera  -->
+    </xs:complexType>
+</xs:element>
+
+<xs:attribute name="nombre del atributo" use="required">
+    <xs:simpleType>
+        <xs:restriction base="">
+            <xs:pattern value="" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+
+los atributos siempre tiene el use="required"
+
+<xs:element name="proveedor" minOccurs="0" maxOccurs="unbounded ">
+<!-- Cada producto puede tener 0 o más proveedor: por eso se pone el minimo 0 y maximo -->
+<xs:complexType>
+
+<!-- Cuando no tiene restricciones ni nada se pone asi: -->
+
+<xs:element name="nombre" type="xs:string" />
+
+<!-- Cuando un elemento se compone de solo un atributo se pone asi-->
+<xs:element name="duracion">
+    <xs:complexType>
+        <xs:attribute name="horas" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:positiveInteger" />
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="X">
+    <xs:simpleType>
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="X" />
+            <xs:maxInclusive value="Y" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="X">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Y" />
+            <xs:enumeration value="Z" />
+            <xs:enumeration value="T" />
+            <xs:enumeration value="H" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+
+<xs:maxLength value="100" />
+
+En XSD no se usan los anclajes ^ y $ — se asume automáticamente que el patrón debe coincidir con
+toda la cadena.
+REGEX:
+DNI español
+
+\d{8}[A-Z]
+
+Explicación:
+^ Inicio de la cadena (para que no haya nada antes)
+\d{8} Exactamente 8 dígitos numéricos (\d = dígito, {8} = 8 repeticiones)
+[A-Z] Una sola letra mayúscula (de la A a la Z)
+$ Final de la cadena (para que no haya nada después)
+
+
+Email
+
+[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}
+
+Explicación:
+^ Inicio de la cadena
+[A-Za-z0-9._%+-]+ Nombre del usuario (puede contener letras, números y símbolos ., _, %, +, -)
+@ El símbolo obligatorio que separa usuario y dominio
+[A-Za-z0-9.-]+ Parte del dominio (ej: gmail, hotmail, iesgranada, etc.)
+\. Punto antes de la extensión
+[A-Za-z]{2,} Extensión (mínimo 2 letras: es, com, org, etc.)
+$ Fin de la cadena
+
+TELEFONO
+\d{3}-\d{3}-\d{3}
+
+Explicación
+^ Inicio de la cadena
+\d{3} Tres dígitos (0–9)
+- Un guion literal
+\d{3} Otros tres dígitos
+- Otro guion literal
+\d{3} Últimos tres dígitos
+$ Final de la cadena
+
+
+UN CODIGO DE UN ARTICULO
+
+[A-Za-z]{3}-\d{4}
+
+Explicación
+
+^ Inicio de la cadena
+[A-Za-z]{3} Tres letras, mayúsculas o minúsculas
+- Guion literal
+\d{4} Cuatro dígitos (0–9)
+$ Final de la cadena
+
+
+nombre con tildes:
+
+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(\s[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*
+
+[A-ZÁÉÍÓÚÑ][
+La primera letra debe ser mayúscula (A–Z o con tilde/ñ).
+[a-záéíóúñ]+
+Luego vienen una o más letras minúsculas (permite tildes y ñ).
+(\s[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)* Este grupo es opcional y repetible (*) → permite uno o más apellidos o
+segundos nombres, separados por un espacio (\s).
+Cada palabra también empieza con mayúscula y sigue con minúsculas.
+
+
+[A-Za-z]*[a-áéíóú]*

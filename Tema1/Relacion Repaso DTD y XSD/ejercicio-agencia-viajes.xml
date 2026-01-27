@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agencia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ejercicio-agencia-viajes.xsd">
+    <paquete codigo="PKT-4859">
+        <destino>granada</destino>
+        <precio>1500</precio>
+        <fechaInicio>2026-10-25</fechaInicio>
+        <fechaFin>2026-11-05</fechaFin>
+        <tipo>aventura</tipo>
+        <cliente>
+            <nombre>Luis</nombre>
+            <dni>78599663L</dni>
+            <edad>25</edad>
+            <email>luis@gmail.com</email>
+        </cliente>
+    </paquete>
+    <paquete codigo="PKT-8965">
+        <destino> malaga </destino>
+        <precio> 1400 </precio>
+        <fechaInicio> 2026-11-15 </fechaInicio>
+        <fechaFin> 2026-11-30 </fechaFin>
+        <tipo>cultural</tipo>
+        <cliente>
+            <nombre>Marcos</nombre>
+            <dni>75571716Q</dni>
+            <edad>20</edad>
+            <email>marcos@gmail.com</email>
+        </cliente>
+    </paquete>
+</agencia>
+
+
+<!-- Ejercicio 5 – Agencia de Viajes
+Crea un XSD y un XML para una agencia que gestiona paquetes turísticos.
+
+Requisitos:
+El  raíz será <agencia>.
+Contendrá varios <paquete> con:
+Atributo codigo obligatorio (formato: PKT-XXXX → regex).
+destino (cadena obligatoria).
+precio (decimal mayor que 0).
+fechaInicio y fechaFin (tipo xs:date, la segunda debe ser posterior).
+tipo (enumeración: Aventura, Relax, Cultural, Familiar).
+Cada paquete incluye una lista de cliente:
+nombre (string que empiece por mayúscula → regex).
+dni (regex: 8 dígitos + 1 letra mayúscula).
+edad (entero entre 18 y 99).
+email (regex formato válido).
+
+👉 Tu tarea:
+Crea el XSD completo con restricciones y tipos complejos.
+Genera un XML válido con al menos 2 paquetes turísticos. -->

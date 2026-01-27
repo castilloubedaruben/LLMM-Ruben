@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gimnasio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="ejercicio-gimnasio.chatgpt.xsd">
+    <socio id="1">
+        <nombre>Carlos Perez</nombre>
+        <edad>28</edad>
+        <telefono>678-123-456</telefono>
+        <membresia>mensual</membresia>
+    </socio>
+    <socio id="2">
+        <nombre>Ana Lopez</nombre>
+        <edad>35</edad>
+        <telefono>612-987-654</telefono>
+        <membresia>anual</membresia>
+    </socio>
+</gimnasio>
+
+<!-- 📄 Enunciado + XML
+
+El sistema gestiona un gimnasio con sus socios.
+
+Características:
+El documento raíz es gimnasio.
+Contiene varios socio.
+Cada socio tiene:
+nombre (cadena normal).
+edad (número entero).
+telefono (formato NNN-NNN-NNN).
+membresia con los valores posibles: "Mensual", "Trimestral", "Anual".
+Cada socio tiene un atributo id que es un número positivo y obligatorio. -->

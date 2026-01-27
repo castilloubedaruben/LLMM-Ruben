@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="inventario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="producto" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" />
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="categoria">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="perifericos" />
+                                        <xs:enumeration value="ordenador" />
+                                        <xs:enumeration value="movil" />
+                                        <xs:enumeration value="accesorios" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="precio">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:decimal">
+                                        <xs:pattern value="\d+\.\d{2}" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="stock">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="0" />
+                                        <xs:maxInclusive value="1000" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="proveedor" minOccurs="0" maxOccurs="unbounded "> 
+                                <!-- Cada producto puede tener 0 o más proveedor: por eso se pone el minimo 0 y maximo -->
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string" />
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="telefono">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="\d{3}-\d{3}-\d{3}"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="pais">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string" />
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:positiveInteger" />
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+
+<!-- Ejercicio 6 – Inventario de Tienda Tecnológica
+Crea un XSD que defina la estructura de un inventario y un XML de prueba.
+
+Requisitos:
+Raíz <inventario>.
+Contiene varios producto, con:
+id (atributo obligatorio, tipo entero positivo).
+nombre (string obligatorio).
+categoria (enumeración: Periférico, Ordenador, Móvil, Accesorio).
+precio (decimal, con 2 decimales exactos → regex \d+\.\d{2}).
+stock (entero entre 0 y 1000).
+Cada producto puede tener 0 o más proveedor:
+nombre, telefono (XXX-XXX-XXX), pais.
+👉 Añade también un tipo derivado por restricción para precio con rango entre 0.01 y 9999.99. -->
