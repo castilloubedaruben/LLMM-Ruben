@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    font-family: Open Sans;
+    margin: 0; 
+    padding: 0;
+}
+body {
+    background-color: rgb(181, 238, 238); /* la mejor forma de poner color al fondo uniforme */
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.menu {
+    display: flex;
+    gap: 20px; /* separacion entre las opciones de menu*/
+    background-color: rgb(7, 139, 201);
+    list-style: none; /* quita los puntitos que salen delante del menu  */
+}
+.menu a:hover {
+    background-color: rgb(67, 67, 231);
+    
+}
+
+.menu a {
+    text-decoration: none; /* quita el subrayado que sale por defecto en el menu, hay que hacerlo en un nuevo selector unico */
+    padding: 3px; /* le hace un borde al pasar por encima el raton y parece un boton*/
+    color: white;
+}
+
+.perfil img {
+    border-radius: 50%; /* redondea el borde de la imagen solamente*/
+}
+
+.perfil {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.perfil p {
+    padding: 10px;
+    background-color: rgb(131, 186, 231);
+}
+.infoPerfil{
+    display: flex;
+    flex-direction: column;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.posts article {
+    border-radius: 15px;
+}
+.posts article:hover {
+    background-color: whitesmoke;
+}
+#post1{
+    border-width: 3px; /* para que un borde sea visible necesita estos tres elementos*/
+    border-style:dashed;
+    border-color: red;
+}#post2{
+    border-width: 3px;
+    border-style:groove ;
+    border-color: rgb(255, 153, 0);
+}#post3{
+    border-width: 3px;
+    border-style:ridge;
+    border-color: rgb(255, 4, 150);
+}
+.posts button {
+    background-color: rgb(122, 153, 240);
+    color: black;
+    border-radius: 5px;
+    transition: 0.3s; /* lo aplica al transform ese tiempo para crecer en este caso*/
+}
+.posts button:hover{
+    transform: scale(1.1); /* aumenta el tamño en la escala que le pongamos*/
+    background-color: rgb(210, 245, 245);
+    /* transition: 0.3s; si lo pones en el hover, la transicion se corta al no tener el raton encima, si lo pongo en la clase principal se aplica para crecer y decrecer*/
+}
+
+.others{
+    display: flex;
+    justify-content: space-around;
+}
+#post4 {
+    background-color:antiquewhite ;
+    border-width: 3px;
+    border-style:ridge;
+    border-color: rgb(10, 10, 10);
+}
+#post4 img{
+    transition: 0.3s;
+}
+#post4 img:hover {
+    transform: scale(1.1);
+}
+#post5 {
+    background-color:antiquewhite ;
+    border-width: 3px;
+    border-style:dashed;
+    border-color: rgb(240, 0, 0);
+}
+#post5 img{
+    transition: 0.3s;
+}
+#post5 img:hover {
+    transform: scale(1.1);
+}
