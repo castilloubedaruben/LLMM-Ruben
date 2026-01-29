@@ -79,6 +79,7 @@ body {
 .film {
     display: flex;
     justify-content: space-between;
+    margin: 3%;
 }
 
 .film img {
@@ -94,6 +95,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 15px;
+    margin: 3%;
 }
 
 .characters1{
@@ -119,9 +121,27 @@ body {
     color: rgb(250, 221, 177);
 }
 
+.events {
+    display: flex;
+    justify-content: space-around;
+}
+
+.allevents {
+    display: flex;
+    border-width: 4px;
+    border-style: solid;
+    border-color: white(0, 0, 0);
+}
+
+.allevents li{
+    list-style: none;
+}
 .footer {
+    background-color: #4b79a1;
+    height: 250px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 .rrss {

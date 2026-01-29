@@ -4,38 +4,47 @@
     margin: 0; 
     padding: 0;
 }
+
 body {
     background-color: rgb(181, 238, 238); /* la mejor forma de poner color al fondo uniforme */
 }
+
 header {
+    background-color: antiquewhite;
     display: flex;
     justify-content: space-between;
-}
-.menu {
-    display: flex;
-    gap: 20px; /* separacion entre las opciones de menu*/
-    background-color: rgb(7, 139, 201);
-    list-style: none; /* quita los puntitos que salen delante del menu  */
-}
-.menu a:hover {
-    background-color: rgb(67, 67, 231);
     
 }
 
-.menu a {
+.menulist {
+    display: flex;
+    gap: 20px; /* separacion entre las opciones de menu*/
+    list-style: none; /* quita los puntitos que salen delante del menu  */
+}
+
+.menulist a:hover {
+    color: rgb(27, 96, 156);
+}
+
+.menulist a {
+    display: flex;
+    align-items: center;
     text-decoration: none; /* quita el subrayado que sale por defecto en el menu, hay que hacerlo en un nuevo selector unico */
     padding: 3px; /* le hace un borde al pasar por encima el raton y parece un boton*/
-    color: white;
+    color: black;
+    font-weight: bold;
 }
 
 .perfil img {
     border-radius: 50%; /* redondea el borde de la imagen solamente*/
+    height: 150px;
 }
 
 .perfil {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 3%;
 }
 .perfil p {
     padding: 10px;
@@ -51,6 +60,7 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    margin: 3%;
 }
 .posts article {
     border-radius: 15px;
@@ -86,6 +96,7 @@ header {
 .others{
     display: flex;
     justify-content: space-around;
+    margin: 3%;
 }
 #post4 {
     background-color:antiquewhite ;
