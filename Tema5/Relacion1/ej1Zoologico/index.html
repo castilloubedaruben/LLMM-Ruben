@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoológico</title>
+</head>
+<body>
+    <h1>Animales del Zoológico 🐾</h1>
+    <div class="animal">León</div>
+    <div class="animal">Tigre</div>
+    <div class="animal">Elefante</div>
+    <button id="resaltarAnimales">Resaltar Animales</button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+<script>
+    const animales =document.getElementsByClassName("animal")
+    for (const animal of animales) {
+        animal.style.backgroundColor = "lightyellow"
+    }
+
+    const boton = document.getElementById("resaltarAnimales")
+    boton.style.color="lightgreen"
+
+</script>
