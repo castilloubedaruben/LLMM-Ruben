@@ -17,6 +17,7 @@ body h1,h2,h3 {
     display: flex;
     justify-content: space-between;
     background-color: rgb(128, 123, 123);
+    border-bottom: 4px solid black;
 }
 
 .header h1 {
@@ -27,12 +28,13 @@ body h1,h2,h3 {
 .inicio {
     font-weight: bold;
 }
+
 .menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
     list-style: none;
-    gap: 10px;
+    gap: 20px;
+    font-size: 20px;
 }
 
 .menu a {
@@ -70,7 +72,7 @@ body h1,h2,h3 {
 .realcases {
     display: flex;
     justify-content: space-between;
-    flex: content;
+
     gap: 5px;
 }
 
@@ -92,6 +94,12 @@ body h1,h2,h3 {
     height: 350px;
 }
 
+.casos:hover{
+    background-color: rgb(41, 46, 49);
+    color: beige;
+    transform: scale(1.1);
+}
+
 .casos > h3 {
     color: orange;
 }
@@ -109,6 +117,90 @@ body h1,h2,h3 {
 
 button {
     font-weight: bold;
+    border-radius: 15px;
+}
+
+#amenazas {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+#amenazas > div {
+    border-style: solid;
+    border-radius: 5%;
+    text-align: center;
+}
+
+.amenaza1 {
+    background-color: rgb(146, 146, 139);
+    font-style: italic;
+    margin: 20px;
+}
+
+.amenaza2 {
+    background-color: rgb(192, 192, 153);
+    font-size: 15px;
+}
+
+.amenaza3 {
+    background-color: rgb(95, 126, 117);
+    font-weight: bold;
+    margin: 20px;
+}
+
+.amenaza4 {
+    background-color: rgb(148, 177, 155);
+    font-style: italic;
+    margin: 10px;
+}
+
+#campañas {
+    display: flex;
+    justify-content: space-around;
+}
+
+#campañas>h2 {
+    font-size: medium;
+}
+
+.listaEventos {
+    display: flex;
+    margin-bottom: 4%;
+    gap: 15%;
+    list-style: none;
+}
+
+.listaEventos > .eventoDiferente {
+    border-style: double;
+    border-radius: 6%;
+    border-color: rgb(25, 29, 63);
+    background-color: rgb(126, 111, 90);
+}
+
+.listaEventos > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-style: solid;
+    border-radius: 6%;
+    text-align: center;
+    background-color: rgb(84, 89, 92);
+    width: 280px;
+    height: 150px;
+}
+
+li > time {
+    color: rgb(228, 135, 15);
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+li > time:hover {
+    color: black;
+    font-size:x-large;
 }
 
 

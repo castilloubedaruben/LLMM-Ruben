@@ -1,0 +1,218 @@
+/* ================================ HACER HEADER ============================ */
+/*                            FONDO DIFERENTE, MENU ALINEADO Y INTERACTIVO             */
+
+/* 1. Reseteo del borde y el fondo para que lleguen a los extremos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Contenedor Principal (Header) */
+.main-header {
+    background-color: #2c3e50; /* Color oscuro elegante */
+    color: white;
+    display: flex;             /* Activamos Flexbox */
+    justify-content: space-between; /* Título a la izq, Menú a la der */
+    align-items: center;       /* Centrado vertical */
+    padding: 15px 5%;          /* 15px arriba/abajo, 5% a los lados */
+    border-bottom: 5px solid #e74c3c; /* Borde inferior resaltado */
+}
+
+/* 3. Título / Logo */
+.logo h1 {
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+/* 4. Menú de Navegación */
+.nav-menu {
+    display: flex;             /* Ponemos los enlaces en fila */
+    list-style: none;          /* Quitamos los puntos de la lista */
+    gap: 25px;                 /* Espacio exacto entre botones */
+}
+
+.nav-menu a {
+    text-decoration: none;     /* Quitamos el subrayado */
+    color: #ecf0f1;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ; /* Hace que el cambio de color y tamaño sea suave */
+}
+
+/* 5. INTERACTIVIDAD (Hover) */
+.nav-menu a:hover {
+    color: #f1c40f;            /* Cambia a amarillo */
+    transform: scale(1.2);     /* Aumenta el tamaño un 20% */
+}
+
+/* 6. INDICADOR DE PÁGINA ACTUAL (Active) */
+.nav-menu a.active {
+    color: #e74c3c;            /* Color diferente para la página activa */
+    border-bottom: 2px solid #e74c3c; /* Subrayado especial */
+}
+
+/* ====================================*/
+
+.hero-section {
+    /* 1. Fondo que cubre todo */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('tu-imagen.jpg');
+    background-size: cover;       /* La foto no se estira, se adapta */
+    background-position: center;  /* Centra la imagen */
+    
+    /* 2. Dimensiones y Flexbox */
+    height: 60vh;                 /* Ocupa el 60% de la altura de la pantalla */
+    display: flex;
+    justify-content: center;      /* Centra horizontalmente */
+    align-items: center;          /* Centra verticalmente */
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 20px;
+}
+
+.hero-slogan {
+    font-size: 3rem;              /* Tamaño grande para impacto */
+    margin-bottom: 20px;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.hero-slogan span {
+    color: #f1c40f;               /* Palabra destacada en otro color */
+}
+
+/* 3. BOTÓN INTERACTIVO */
+.hero-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;          /* Transforma el texto a mayuscula*/
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50px;          /* Botón redondeado moderno */
+    cursor: pointer;            /* Cambia la flecha del raton por la manita para clikcar*/
+    transition: all 0.4s;    /* Animación. All para referirte a todo el contenido*/
+}
+
+.hero-btn:hover {
+    background-color: white;
+    color: #e74c3c;
+    transform: translateY(-5px);  /* El botón "flota" hacia arriba (eje Y)*/
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+/* Poner la transición en el :hover: 
+Si pones transition dentro de .boton:hover, la animación funcionará al entrar, pero al quitar el ratón el botón volverá de golpe a su estado original sin animación.
+Pon siempre la transición en la clase principal. */
+
+/* ============================================= SECCIONES ============================= */
+
+/* Contenedor General */
+.grid-container {
+    display: flex;
+    justify-content: center; /* Centra las tarjetas en la página */
+    gap: 30px;               /* Espacio constante entre tarjetas */
+    padding: 40px;
+    flex-wrap: wrap;         /* Si no caben, bajan a la siguiente fila */
+}
+
+/* La Tarjeta Individual */
+.card {
+    background-color: #f9f9f9;
+    border: 2px solid #333;
+    border-radius: 15px;
+    width: 300px;
+    
+    /* ALINEACIÓN INTERNA */
+    display: flex;
+    flex-direction: column;  /* Elementos uno debajo de otro */
+    align-items: center;      /* Centra todo horizontalmente */
+    text-align: center;       /* Centra el texto */
+    
+    /* MODELO DE CAJA */
+    padding: 30px;           /* Espacio de seguridad para que el texto no pegue al borde */
+    transition: all 0.3s ease;
+}
+
+/* Alineación del texto dentro de la caja */
+.card-text h3 {
+    margin-bottom: 15px;      /* Separa el título del párrafo */
+    color: #e74c3c;
+    font-family: sans-serif;
+}
+
+.card-text p {
+    line-height: 1.6;         /* Da aire entre líneas de texto dentro de un parrafo para que se lea mejor */
+    color: #666;
+    margin-bottom: 20px;      /* Separa el texto del botón */
+}
+
+/* Interactividad */
+.card:hover {
+    transform: translateY(-10px); /* Sube un poco */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Sombra alrededor del borde al hacer la animacion */
+    border-color: #e74c3c;        /* El borde cambia de color */
+}
+
+/* ===================================== FOOTER INTERACTIVO CON RRSS =======================*/
+
+.main-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 40px 0 20px 0;
+    border-top: 3px solid #e74c3c; /* Separación clara del resto */
+    margin-top: 50px; /* Espacio exterior arriba */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Distribuye las 3 columnas */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Para que en móvil se apilen */
+    max-width: 1200px;
+    margin: 0; /* Centra el bloque entero */
+    padding: 0 20px;
+}
+
+.footer-container h4 {
+    margin-bottom: 15px;
+    color: #e74c3c;
+    text-transform: uppercase;
+}
+
+/* --- ESTILOS DE REDES SOCIALES (INTERACTIVO) --- */
+.social-links {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.4s; 
+    display: inline-block;
+}
+
+/* Efecto hover interactivo */
+.social-links a:hover {
+    background-color: #e74c3c; /* Cambia a rojo */
+    transform: scale(1.1)
+}
+
+/* Parte inferior del copy */
+.footer-copy {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: #888;
+}
