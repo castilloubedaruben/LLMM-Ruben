@@ -1,12 +1,12 @@
 * {
-    margin: 5px;
-    padding: 5px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     background-color: rgb(122, 108, 108);
-    padding: 5px;
+    padding: 10px;
 }
 
 body h1,h2,h3 {
@@ -14,10 +14,9 @@ body h1,h2,h3 {
 }
 
 .header {
-    border-style: solid;
-    border-radius: 25%;
     display: flex;
     justify-content: space-between;
+    background-color: rgb(128, 123, 123);
 }
 
 .header h1 {
@@ -33,6 +32,7 @@ body h1,h2,h3 {
     flex-wrap: wrap;
     justify-content: flex-end;
     list-style: none;
+    gap: 10px;
 }
 
 .menu a {
@@ -53,9 +53,62 @@ body h1,h2,h3 {
     flex-direction: column;
     align-items: center;
     color: beige;
-    margin: 4%;
     background-image: url(img/pirateria.jpg);
     background-origin: content-box;
     background-position: center;
     background-repeat: no-repeat;
+    margin: 20px;
+    padding: 20px;
 }
+
+.hero button {
+    margin-top: 10px;
+    height: 40px;
+    width: 100px;
+}
+
+.realcases {
+    display: flex;
+    justify-content: space-between;
+    flex: content;
+    gap: 5px;
+}
+
+.realcases div {
+    border-style: solid;
+    border-color: aliceblue;
+    border-radius: 3%;
+    background-color: rgb(112, 104, 104);
+    
+}
+
+.casos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+    width: 350px;
+    height: 350px;
+}
+
+.casos > h3 {
+    color: orange;
+}
+
+.casos img{
+    border-radius: 10%;
+    width: 50%;
+    height: 50%;
+}
+
+.casos > button {
+    height: 50px;
+    width: 120px;
+}
+
+button {
+    font-weight: bold;
+}
+
+
