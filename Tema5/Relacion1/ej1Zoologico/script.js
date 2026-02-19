@@ -1,5 +1,4 @@
-
-let animales = document.getElementsByClassName("animal")
+let animales = document.getElementsByClassName("animal");
 for (let animal of animales) {
     animal.style.backgroundColor = "lightyellow"
 }
