@@ -2,10 +2,11 @@
 
 const noticias = document.querySelectorAll(".noticia");
 
-noticias.forEach((noticia, i) => {
-    if (i % 2 === 0) {
-        noticia.style.backgroundColor="lightgray"
+for (let i = 0; i < noticias.length; i++) {
+    if (i%2==0) {
+        noticias[i].style.backgroundColor="lightblue"
     } else {
-        noticia.style.color="blue"
+        noticias[i].style.color="red"
     }
-});
+    
+}
