@@ -5,10 +5,9 @@ imagenAlerta.addEventListener("click", function() {
     alert ("¡Siente la Energía de Burn!")
 })
 
-
 // ========================= 2 =======================
 
-const cambiarImagen = document.getElementById("imgHover")
+let cambiarImagen = document.getElementById("imgHover")
 
 cambiarImagen.addEventListener("mouseover", function () {
     cambiarImagen.setAttribute("src", "https://picsum.photos/200?random=99")
