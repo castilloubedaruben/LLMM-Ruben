@@ -1,15 +1,18 @@
 const anadir = document.getElementById("btnAniadir")
 const borrar = document.getElementById("btnBorrar")
 const editar = document.getElementById("btnEditar")
+const lista = document.getElementById("lista")
 
 anadir.addEventListener("click",function () {
-    const lista =document.getElementById("lista")
-    const nuevoLi=document.createElement("li")
-    lista.appendChild(nuevoLi.textContent("Elemento"))
-    console.log("hola")
-    let cantidad=document.childElementCount("ul")
-    
-    lista.lastElementChild(nuevoLi+(cantidad+1))
+    let nuevoElemento = document.createElement("li")
+    nuevoElemento.textContent= "Elemento " + (lista.childElementCount+1)
+    lista.appendChild(nuevoElemento)
+})
 
+borrar.addEventListener("click", function () {
+    lista.lastElementChild.remove()
+})
 
+editar.addEventListener("click",function () {
+    lista.lastElementChild.textContent="Elemento editado"
 })
